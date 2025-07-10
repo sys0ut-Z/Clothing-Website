@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+/* to enable dark theme globally */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* @layer base{
+  :root {
+    --color-primary : #fea928;
+    --color-secondary: #ed8900;
+
+    --container-padding-default : 1rem;
+    --container-padding-sm : 3rem;
+  }
+} */
+
+/* :root{
+  --color-primary : #fea928;
+  --color-secondary: #ed8900;
+  --bg-primary : #eae9f0;
+
+  --container-padding-default : 1rem;
+  --container-padding-sm : 3rem; 
+
+  --dark-bg : #8e90a54f;
+  --dark-color : #ffffff;
+} */
+
+/* ignore the warning, this is correct way */
+@theme{
+  --color-test : red;
+  /* --color-dark : #fff; */
+  --color-custom : #ffc6c4;
+  --color-primary : #fea928;
+  --color-secondary : #ed8900;
+  --border-color-primary : #fea928;  
+  --background-color-primary : #eae9f0;
+  --background-color-secondary : #fea928;
+  --background-color-tertiary : #ed8900;
+  --drop-shadow-primary : 0 6px 10px #8e90a54f;
+  --shadow-primary : 0 6px 10px #8e90a54f;
+  --shadow-secondary : 0 3px 10px #8e90a54f;
+}
+
+.container {
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* @layer base{
+  :root{
+    --text: #080d0a;
+    --background: #f2f8f4;
+    --primary: #56aa72;
+    --secondary:  #9dd2af;
+    --accent: #79c793;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root{
+      --text: #fff;
+      --background: #000;
+      --primary: #fea928;
+      --secondary: #ed8900;
+      --accent : #30ffb0;
+    }
+  }
+} */

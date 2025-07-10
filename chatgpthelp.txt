@@ -1,0 +1,91 @@
+// this won't work in Tailwind 4.0 version
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer theme {
+  :root {
+    --color-primary: #fea928;
+    --color-secondary: #ed8900;
+    
+    /* Define custom padding variables */
+    --container-padding-default: 1rem;
+    --container-padding-sm: 3rem;
+  }
+}
+
+@layer utilities {
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+
+  /* Create container utility using CSS variables */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--container-padding-default);
+    padding-right: var(--container-padding-default);
+  }
+
+  /* Apply the sm padding */
+  @media (min-width: 640px) {
+    .container {
+      padding-left: var(--container-padding-sm);
+      padding-right: var(--container-padding-sm);
+    }
+  }
+}
+
+
+
+
+// another solution
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer theme {
+  :root {
+    --color-primary: #fea928;
+    --color-secondary: #ed8900;
+    --container-padding-default: 1rem;
+    --container-padding-sm: 3rem;
+
+    /* Light mode colors */
+    --bg-color: #ffffff;
+    --text-color: #000000;
+  }
+
+  /* Dark mode variables */
+  .dark {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --color-primary: #ffb800; /* Change primary color for dark mode if needed */
+  }
+}
+
+/* Applying the variables */
+@layer utilities {
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  /* Background and text color classes */
+  .bg-theme {
+    background-color: var(--bg-color);
+  }
+
+  .text-theme {
+    color: var(--text-color);
+  }
+}
