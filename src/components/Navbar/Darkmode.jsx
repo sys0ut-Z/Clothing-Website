@@ -11,9 +11,9 @@ const Darkmode = () => {
 
   // print both theme and element
   const element = document.documentElement;
-  // * documentElement is  <html>
-  console.log("theme : ", theme);
-  console.log("element : ", element);
+  // // * documentElement is  <html>
+  // console.log("theme : ", theme);
+  // console.log("element : ", element);
 
   React.useEffect(() => {
     if(theme === "dark"){ // add dark class
